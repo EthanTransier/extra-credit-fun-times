@@ -1,0 +1,28 @@
+@import './parts/nav.scss', './parts/index.scss', './parts/footer.scss',
+  './parts/service.scss', './parts/support.scss', './utils/pageReset.scss',
+  './utils/margin', './utils/padding';
+
+html {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: black;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray;
+}

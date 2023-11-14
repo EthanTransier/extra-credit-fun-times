@@ -1,0 +1,65 @@
+@import "../utils/size.scss";
+
+.info{
+    transition: all 2s ease;
+    display: flex;
+    justify-content: center;
+    @include size(70vw, 50vh);
+    margin-left: 15vw;
+    flex-wrap: wrap;
+}
+
+.info-bottom{
+    @extend .info;
+    margin-bottom: 20vh;
+    margin-top: -50vh;
+    .h1{
+        margin-top: 15vh;
+    }
+}
+
+.right{
+    display: block;
+    @include size(30vw, 20vw);
+    background-color: #2B2B2B;
+    color: white;
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+    transition: all 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.info.hover {
+    height: 25vh;
+    justify-content: space-between;
+}
+.info-bottom.hover {
+    height: 25vh;
+    margin-top: 30vh;
+    justify-content: center;
+}
+
+.hidden.hover {
+    display: inline-block;
+    animation: fadeIn 5s;
+}
+
+.h1.hover {
+    display: none;
+}
+
+body{
+    padding-top: 20%;
+}
