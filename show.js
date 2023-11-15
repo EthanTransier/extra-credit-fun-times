@@ -3,7 +3,7 @@
 let compLength = 0;
 let lapLength = 0;
 let virLength = 0;
-let max = 90;
+let max = 100;
 
 // Set each container to a variable
 var computer = document.querySelector(".computer-repair");
@@ -72,3 +72,14 @@ window.addEventListener("scroll", function() {
     }
 });
 
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+     document.querySelector(".dropbtn").addEventListener("click", function () {
+        document.querySelector(".dropdown-content").classList.toggle("show");
+    });
+  }
+}

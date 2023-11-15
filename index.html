@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/css/style.css">
-    <title>Document</title>
+    <title>Quiktek | Home</title>
+    <link rel="icon" type="image/x-icon" href="./new_non_back-removebg-preview.png">
 </head>
 <body>
     <nav>
@@ -14,70 +15,99 @@
         </div>
         <div class="header-body">
             <div><a href=""><img class="logo" src="./finall-removebg-preview.png"></a></div>
-            <div class="header-tags">
-                <a href="index.html">Home</a>
-                <a href="service.html">Services</a>
-                <a href="support.html">Support</a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="service.html">Services</a>
+                    <a href="support.html">Support</a>
+                </div>
             </div>
+                <div class="header-tags">
+                    <a href="index.html">Home</a>
+                    <a href="service.html">Services</a>
+                    <a href="support.html">Support</a>
+                </div>
         </div>
     </nav>
 
-    <section class="desktop">
-        <div class="image-container">
-            <div class="opening">
-                <h2 class="startInfo startTitle">QuikTek Computers</h2>
-                <h3 class="startInfo startSemiTitle">Serving phoenix since 1998</h4>
-                    <h4 class="startInfo">In Shop Repairs</h4>
-                    <h4 class="startInfo">Pickup Services</h4>
-                    <h4 class="startInfo">Delivery Services</h4>
-                    <div class="learn"><button class="buttons">Learn more</button></div>
-            </div>
-            <div class="rightTriangle"></div>
-        </div>
-        
-        
-        <br><br>
-        
-        
-        <div class="computer-repair">
-            <div class="black-space"></div>
-            <div class="black-right-triangle"></div>
-        </div>
-        <br><br>
-        <div class="laptop-repair">
-            <div class="black-space"></div>
-            <div class="black-left-triangle"></div>
-        </div>
-        <br><br>
-        <div class="virus-removal">
-            <div class="black-space"></div>
-            <div class="black-right-triangle"></div>
-        </div>
-        
-        
-        <br><br>
-    </section>
-    <section class="mobile">
 
-    </section>
+    <div class="image-container">
+        <div class="opening">
+            <h2 class="startInfo">QuikTek Computers</h2>
+                        <h3 class="startInfo">Serving phoenix since 1998</h4>
+                        <h4 class="startInfo"><span>> </span>In Shop Repairs</h4>
+                        <h4 class="startInfo"><span>> </span>Pickup Services</h4>
+                        <h4 class="startInfo"><span>> </span>Delivery Services</h4>
+            <div class="learn"><button class="buttons">Learn more</button></div>
+        </div>
+        <div class="rightTriangle"></div>
+            <div class="mainPc"><img id="size" src="./home.png"></div>
+    </div>
+
+
+    <br><br>
+
+
+    <div class="computer-repair" >
+        <div class="black-space">
+            <h2>Computer Meltdowns? Come to us!</h2>
+            <p>
+                Computer meltdowns are not only irritating; they can dramatically reduce productivity. QuikTek Computer thrives onefficiently repairing computers so you're up and running in no time.
+            </p>
+            <button class="buttons">Learn More</button>
+        </div>
+        <div class="black-right-triangle"></div>
+    </div>
+    <br><br>
+    <div class="laptop-repair">
+        <div class="black-space">
+            <h2>We service a wide variety of Computers:</h2>
+            <p>
+                Computer meltdowns are not only irritating; they can dramatically reduce productivity. QuikTek Computer thrives on efficiently repairing computers so you're up and running in no time.
+            </p>
+            <button class="buttons">Learn More</button>
+        </div>
+        <div class="black-left-triangle"></div>
+    </div>
+    <br><br>
+    <div class="virus-removal">
+        <div class="black-space">
+            <h2>Need Remote Support?</h2>
+            <p>
+                QuikTek Computer offers several support options in order to provide the most convenient solution for your computer repair.We understand the inner workings of your computer system, and we will rapidly have your computer functioning like a dream.
+            </p>
+            <button class="buttons">Learn More</button>
+        </div>
+        <div class="black-right-triangle"></div>
+    </div>
+
     
+    <br><br>
 
 
-    <footer>
-        <div class="footer-top">
+<footer>
+    <div class="footer-left">
         <div class="footer-row">
             <a href="">Home</a>
             <a href="">Support</a>
-            <a href="">Serviecs</a>
-        <!-- </div>
-            <img src="./finall-removebg-preview.png" alt="">
-        </div> -->
-        <div class="footer-bottom">
-            <p>15224 N 59th Ave Suite 4 Glendale AZ
-            Dave@QuikTekComputer.com</p>
+            <a href="">Services</a>
         </div>
+        <br>
+        <div class="footer-column">
+            <p>
+                15224 N 59th Ave Suite 4 Glendale AZ
+            </p>
+            <p>
+                Dave@QuikTekComputer.com
+            </p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <img src="./finall-removebg-preview.png" alt="">
+    </div>
 
-    </footer>
+</footer>
     <script src="show.js"></script>
 </body>
 </html>

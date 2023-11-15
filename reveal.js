@@ -1,4 +1,4 @@
-window.addEventListener("scroll", function() {
+window.addEventListener("click", function() {
     let containerTop = document.querySelector(".info");
     let containerBottom = document.querySelector(".info-bottom");
     let info = document.querySelectorAll(".hidden");
@@ -10,5 +10,8 @@ window.addEventListener("scroll", function() {
         containerBottom.classList.add("hover"); 
         info.forEach(x => x.classList.add("hover"));
         h1.classList.add("hover");
+        document.getElementById("bottom").classList.add("hover");
+        document.getElementById("rightOne").classList.add("hover");
+        document.getElementById("rightTwo").classList.add("hover");
     }
 });

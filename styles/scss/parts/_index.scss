@@ -1,122 +1,139 @@
-@import '../utils/size.scss', '../utils/margin.scss';
+@import "../utils/margin.scss","../utils/padding.scss","../utils/size.scss";
 
-.image-container {
-  @include size(100vw, calc(100vh - 142px));
-  background-image: url('../../image-container.jpg');
-  background-position: center;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  .opening {
-    @include size(calc(27vw - 5px), calc(26vw - 3rem));
-    background-color: #2b2b2b;
-    color: white;
-    position: absolute;
-    // margin-top: 27.2vw;
-    padding-left: 5px;
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    flex-direction: column;
-    justify-content: space-evenly;
-    h4 {
-      font-size: 15px;
-      font-weight: 200;
-      margin-bottom: 1vw;
-    }
+body{
+    background-color: white;
+}
+.image-container{
+    margin-top: -13vw;
+    @include size(100%, 53vw);
+    background-color: white;
 
-    .startInfo {
-      text-align: center;
-      font-weight: lighter;
-      font-size: clamp(0.625rem, 0rem + 2vw, 1.75rem);
-      @include margin(5px, 0, 5px, 0);
+    .opening{
+        @include size(27vw, 26vw);
+        background-color: #161616;
+        color:white;
+        position: absolute;
+        margin-top: 27.2vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h4 {
+            font-size: 1vw;
+        }
+    
+        h3 {
+            font-size: 1.2vw;
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+    
+        h2 {
+            font-size: 2.5vw;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: lighter;
+        }
+        .startInfo{
+            text-align: center;
+            font-weight: lighter;
+            @include margin(5px, 0, 5px, 8%);
+        }
+        .learn{
+            display: flex;
+            justify-content: center;
+        }
+        span{
+            color: #1698DE;
+            font-weight: 800;
+        }
     }
-    .startTitle {
-      font-size: 40px;
-      // margin-top: 1vw;
-      font-weight: bold;
+    .rightTriangle{
+        position: absolute;
+        @include size(0, 0);
+        border-top: 26vw solid transparent;
+        border-left: 15vw solid #161616;
+        border-bottom: 0px solid transparent;
+        border-right: 0px solid transparent;
+        @include margin(27.21vw, 0, 0, 27vw);
     }
-    .startSemiTitle {
-      font-size: 35px;
-    }
-    .learn {
-      display: flex;
-      justify-content: center;
-      .buttons {
-        background: linear-gradient(
-              to right,
-              rgb(214, 14, 225),
-              rgb(98, 14, 141)
-            )
-            padding-box,
-          linear-gradient(to right, rgb(214, 14, 225), rgb(98, 14, 141))
-            border-box;
-        border-radius: 1em;
-        border: 5px solid transparent;
-        color: white;
-        font-weight: bold;
-        font-size: 30px;
-        margin-top: 10px;
-        @include size(300px, 70px);
-      }
-    }
-  }
-  .rightTriangle {
-    position: absolute;
-    @include size(0, 0);
-    border-top: 26vw solid transparent;
-    border-left: 15vw solid #2b2b2b;
-    border-bottom: 0px solid transparent;
-    border-right: 0px solid transparent;
-    @include margin(0, 0, 0, 27vw);
-  }
+}
+.mainPc{
+    margin-left: 50%;
+    padding-top: 100px;
 }
 
 .black-right-triangle {
-  position: absolute;
-  height: 0;
-  width: 0;
-  border-top: 30vw solid transparent;
-  border-left: 15vw solid #2b2b2b;
-  border-bottom: 1px solid #2b2b2b;
-  border-right: 0px solid transparent;
-  margin-top: -30vw;
-  margin-left: 35vw;
+    position: absolute;
+    border-top: 30vw solid transparent;
+    border-left: 15vw solid #161616;
+    border-bottom: 0px solid transparent;
+    border-right: 0px solid transparent;
+    @include margin(-30vw, 0, 0, 35vw);
 }
-.black-left-triangle {
-  position: absolute;
-  border-top: 30vw solid transparent;
-  border-left: 0px solid #2b2b2b;
-  border-bottom: 0px solid transparent;
-  border-right: calc(15vw + 1px) solid #2b2b2b;
-  margin-left: 40.3vw;
-  margin-top: -30vw;
+.black-left-triangle{
+    position: absolute;
+    border-top: 30vw solid transparent;
+    border-left: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-right: 15vw solid #161616;
+    @include margin(-30vw, 0, 0, 50vw);
 }
 .black-space {
-  @include size(35vw, 30vw);
-  background-color: #2b2b2b;
+    @include size(35vw, 30vw);
+    background-color: #161616;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    justify-content: space-around;
+    justify-items: center;
+    p {
+        font-size: 1.6vw;
+        margin-left:1vh;
+        margin-right:1vh;
+    }
+    h2{
+        font-size: 2vw;
+    }
 }
 
-.computer-repair {
-  display: relative;
+.computer-repair, .laptop-repair, .virus-removal{
+    margin-left: 0vw;
+        width: 100vw;
 }
 
-.computer-repair,
-.laptop-repair,
-.virus-removal {
-  margin-left: 5vw;
+.laptop-repair{
+    .black-space {
+        margin-left: 65vw;
+        margin-right: 0
+    }
 }
 
-.laptop-repair {
-  .black-space {
-    margin-left: 55.3vw;
-  }
+.computer-repair.hover, .laptop-repair.hover, .virus-removal.hover{
+    @include size(0vw, 30vw);
+    background-image: url("../../272328.d9fb89f56b4c295a5ef03fb9ec55641a.1600.jpg");
 }
 
-.computer-repair.hover,
-.laptop-repair.hover,
-.virus-removal.hover {
-  @include size(0vw, 30vw);
-  background-image: url('../../image-container.jpg');
+.buttons {
+    background: linear-gradient(to right, #1698DE, #5b58ff) padding-box,
+        linear-gradient(to right,
+            #1698DE,
+            #5b58ff) border-box;
+    border-radius: 1em;
+    border: 5px solid transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 2vw;
+    @include size(20vw, 5vw);
+    margin-left: 6vw;
+    margin-right: auto;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+h2 {
+    font-size: 30px;
+    margin-top: 1vw;
+}
+#size{
+    width: 700px;
+    height: 750px;
 }

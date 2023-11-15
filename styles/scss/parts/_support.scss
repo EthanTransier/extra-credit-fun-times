@@ -1,126 +1,81 @@
-@import '../utils/size.scss', '../utils/margin.scss', './index.scss';
+@import "../utils/size.scss", "../utils/margin.scss";
+
 #mainContainer {
-  height: 50vw;
-  display: flex;
-  justify-content: center;
-  #supportBox {
-    @include size(45vw, 45vw);
-    background-color: #2b2b2b;
-    box-sizing: border-box;
+    height: 50vw;
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    justify-content: center;
 
-    .supportHeader {
-      font-size: 30px;
-      @include margin(2vh, 0, 2vh, 0);
-      color: white;
-    }
-    .inputs {
-      display: flex;
-      justify-content: space-evenly;
-      @include size(45vw, 5vh);
-      input {
-        background-color: #d9d9d9;
-        border: none;
-        font-size: medium;
-        @include size(18.6vw, 5vh);
-      }
-    }
+    #supportBox {
+        @include size(45vw, 45vw);
+        background-color: #2B2B2B;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
 
-    .descInput {
-      @include size(40vw, 10vw);
-      color: #2b2b2b;
-      font-weight: bolder;
-      background-color: #d9d9d9;
-      font-size: medium;
-      font-family: 'Trebuchet MS';
-      margin-left: auto;
-      margin-right: auto;
-    }
+        .supportHeader {
+            font-size: 30px;
+            @include margin(2vh, 0, 2vh, 0);
+            color: white;
+        }
 
-    ::placeholder {
-      color: #2b2b2b;
-      font-weight: bolder;
-    }
+        .inputs {
+            display: flex;
+            justify-content: space-evenly;
+            @include size(45vw, 5vh);
 
-    .supportSubmit {
-      @include size(25vw, 5vh);
-      background-color: #7800c6;
-      color: white;
-      border: none;
-      font-family: 'Trebuchet MS';
-      font-size: medium;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 5%;
-      margin-top: 5%;
-      background: linear-gradient(to right, rgb(214, 14, 225), rgb(98, 14, 141))
-          padding-box,
-        linear-gradient(to right, rgb(214, 14, 225), rgb(98, 14, 141))
-          border-box;
-      border: 5px solid transparent;
-      font-size: 20px;
-      border-radius: 1em;
-    }
+            input {
+                background-color: #D9D9D9;
+                border: none;
+                font-size: medium;
+                @include size(18.6vw, 6vh);
+            }
+        }
 
-    #googleMap {
-      @include size(30vw, 20vw);
-      margin-left: auto;
-      margin-right: auto;
+        .descInput {
+            @include size(40vw, 20vh);
+            color: #2B2B2B;
+            font-weight: bolder;
+            background-color: #D9D9D9;
+            font-size: medium;
+            font-family: 'Trebuchet MS';
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5%;
+        }
+
+        ::placeholder {
+            color: #2B2B2B;
+            font-weight: bolder;
+        }
+
+        .supportSubmit {
+            @include size(25vw, 5vh);
+            background-color: #7800C6;
+            border: none;
+            font-family: 'Trebuchet MS';
+            font-size: medium;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2.5%;
+            margin-top: 5%;
+            background: linear-gradient(to right, #1698de, #5b58ff) padding-box,
+                linear-gradient(to right, #1698de, #5b58ff) border-box;
+            border: 5px solid transparent;
+            font-size: 20px;
+            border-radius: 1em;
+            color: white;
+        }
+
+        #map-responsive {
+            overflow: hidden;
+            position: relative;
+            height: 40%;
+            margin: auto;
+            background-color: #D9D9D9;
+            width: 80%;
+            margin-bottom: 3.5%;
+        }
+
     }
-  }
 }
-
-// body {
-//     padding-top: 15%;
-// }
-
-// @media (min-width: 1200px) {
-//     .supportHeader {
-//             color: white;
-//             font-size: 100px;
-//         }
-// }
-
-// $breakpoint-xsmall: 320px;
-// $breakpoint-small: 576px;
-// $breakpoint-medium: 768px;
-// $breakpoint-large: 1024px;
-// $breakpoint-extra-large: 1300px;
-
-// @mixin min-width($breakpoint) {
-//     @if ($breakpoint ==xsmall) {
-//         @media (min-width: $breakpoint-xsmall) {
-//             @content;
-//         }
-//     }
-
-//     @else if ($breakpoint ==small) {
-//         @media (min-width: $breakpoint-small) {
-//             @content;
-//         }
-//     }
-
-//     @else if ($breakpoint ==medium) {
-//         @media (min-width: $breakpoint-medium) {
-//             @content;
-//         }
-//     }
-
-//     @else if ($breakpoint ==large) {
-//         @media (min-width: $breakpoint-large) {
-//             @content;
-//         }
-//     }
-
-//     @else if ($breakpoint ==xlarge) {
-//         @media (min-width: $breakpoint-extra-large) {
-//             @content;
-//         }
-//     }
-
-//     @else {
-//         @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
-//     }
-// }
