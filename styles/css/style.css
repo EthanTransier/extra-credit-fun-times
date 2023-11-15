@@ -1,3 +1,7 @@
+nav {
+  width: 100vw;
+  height: calc(7rem + 30px);
+}
 nav .header-top {
   overflow: hidden;
   background-color: #7800c6;
@@ -27,7 +31,6 @@ nav .header-body {
   justify-content: space-between;
 }
 nav .header-body a {
-  float: left;
   color: white;
   text-align: center;
   padding: 12px;
@@ -41,10 +44,9 @@ nav .header-tags {
   font-weight: lighter;
   gap: 10px;
   display: flex;
-  gap: 40px;
+  gap: clamp(1.25rem, 0.921rem + 1.754vw, 2.5rem);
 }
 nav .header-tags a {
-  float: left;
   color: white;
   text-align: center;
   padding-top: 12px;
@@ -52,7 +54,7 @@ nav .header-tags a {
   padding-left: 5px;
   padding-right: 5px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: clamp(1.125rem, 0.675rem + 2.4vw, 1.5rem);
   line-height: 25px;
   border-radius: 5px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -61,7 +63,7 @@ nav .header-tags a:hover {
   background-color: #343434;
   font-weight: bolder;
   transition: 0.6s;
-  font-size: clamp(1rem, 0.844rem + 0.833vw, 1.313rem);
+  font-size: clamp(1.125rem, 0.525rem + 3.2vw, 1.625rem);
   border-style: solid;
   border-width: 2px;
   border-image: linear-gradient(to right, #008080, #7800c6) 1;
@@ -70,27 +72,33 @@ nav .logo {
   width: clamp(9.375rem, 6.25rem + 16.667vw, 15.625rem);
 }
 
+@media only screen and (max-width: 500px) {
+  .header-body {
+    flex-direction: column;
+  }
+}
 .image-container {
-  margin-top: -13vw;
-  width: 100%;
-  height: 53vw;
+  width: 100vw;
+  height: calc(100vh - 142px);
   background-image: url("../../image-container.jpg");
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 }
 .image-container .opening {
   width: calc(27vw - 5px);
-  height: 26vw;
+  height: calc(26vw - 3rem);
   background-color: #2b2b2b;
   color: white;
   position: absolute;
-  margin-top: 27.2vw;
   padding-left: 5px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   flex-direction: column;
-}
-.image-container .opening h2 {
-  font-size: 30px;
-  margin-top: 1vw;
+  justify-content: space-evenly;
 }
 .image-container .opening h4 {
   font-size: 15px;
@@ -106,6 +114,13 @@ nav .logo {
   margin-bottom: 5px;
   margin-left: 0;
 }
+.image-container .opening .startTitle {
+  font-size: 40px;
+  font-weight: bold;
+}
+.image-container .opening .startSemiTitle {
+  font-size: 35px;
+}
 .image-container .opening .learn {
   display: flex;
   justify-content: center;
@@ -116,9 +131,10 @@ nav .logo {
   border: 5px solid transparent;
   color: white;
   font-weight: bold;
-  font-size: 20px;
-  width: 20vw;
-  height: 5vw;
+  font-size: 30px;
+  margin-top: 10px;
+  width: 300px;
+  height: 70px;
 }
 .image-container .rightTriangle {
   position: absolute;
@@ -128,7 +144,7 @@ nav .logo {
   border-left: 15vw solid #2b2b2b;
   border-bottom: 0px solid transparent;
   border-right: 0px solid transparent;
-  margin-top: 27.21vw;
+  margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 27vw;
@@ -136,20 +152,22 @@ nav .logo {
 
 .black-right-triangle {
   position: absolute;
+  height: 0;
+  width: 0;
   border-top: 30vw solid transparent;
   border-left: 15vw solid #2b2b2b;
-  border-bottom: 0px solid transparent;
+  border-bottom: 1px solid #2b2b2b;
   border-right: 0px solid transparent;
-  margin-left: 35vw;
   margin-top: -30vw;
+  margin-left: 35vw;
 }
 
 .black-left-triangle {
   position: absolute;
   border-top: 30vw solid transparent;
-  border-left: 0px solid transparent;
+  border-left: 0px solid #2b2b2b;
   border-bottom: 0px solid transparent;
-  border-right: 15vw solid #2b2b2b;
+  border-right: calc(15vw + 1px) solid #2b2b2b;
   margin-left: 40.3vw;
   margin-top: -30vw;
 }
@@ -158,6 +176,10 @@ nav .logo {
   width: 35vw;
   height: 30vw;
   background-color: #2b2b2b;
+}
+
+.computer-repair {
+  display: relative;
 }
 
 .computer-repair,
@@ -227,12 +249,39 @@ footer .footer-bottom {
 }
 
 .right {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   width: 30vw;
   height: 20vw;
-  background-color: #2B2B2B;
+  background-color: #2b2b2b;
   color: white;
   text-align: center;
+  padding: 1rem;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+.serviceTitle {
+  font-size: 28px;
+  margin-bottom: 0.5rem;
+}
+
+.serviceInfo {
+  font-size: 20px;
+}
+
+.buttons {
+  background: linear-gradient(to right, rgb(214, 14, 225), rgb(98, 14, 141)) padding-box, linear-gradient(to right, rgb(214, 14, 225), rgb(98, 14, 141)) border-box;
+  border-radius: 1em;
+  border: 5px solid transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  width: 300px;
+  height: 60px;
+  cursor: pointer;
 }
 
 .hidden {
@@ -268,31 +317,28 @@ footer .footer-bottom {
   display: none;
 }
 
-body {
-  padding-top: 20%;
-}
-
 .image-container {
-  margin-top: -13vw;
-  width: 100%;
-  height: 53vw;
+  width: 100vw;
+  height: calc(100vh - 142px);
   background-image: url("../../image-container.jpg");
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 }
 .image-container .opening {
   width: calc(27vw - 5px);
-  height: 26vw;
+  height: calc(26vw - 3rem);
   background-color: #2b2b2b;
   color: white;
   position: absolute;
-  margin-top: 27.2vw;
   padding-left: 5px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   flex-direction: column;
-}
-.image-container .opening h2 {
-  font-size: 30px;
-  margin-top: 1vw;
+  justify-content: space-evenly;
 }
 .image-container .opening h4 {
   font-size: 15px;
@@ -308,6 +354,13 @@ body {
   margin-bottom: 5px;
   margin-left: 0;
 }
+.image-container .opening .startTitle {
+  font-size: 40px;
+  font-weight: bold;
+}
+.image-container .opening .startSemiTitle {
+  font-size: 35px;
+}
 .image-container .opening .learn {
   display: flex;
   justify-content: center;
@@ -318,9 +371,10 @@ body {
   border: 5px solid transparent;
   color: white;
   font-weight: bold;
-  font-size: 20px;
-  width: 20vw;
-  height: 5vw;
+  font-size: 30px;
+  margin-top: 10px;
+  width: 300px;
+  height: 70px;
 }
 .image-container .rightTriangle {
   position: absolute;
@@ -330,7 +384,7 @@ body {
   border-left: 15vw solid #2b2b2b;
   border-bottom: 0px solid transparent;
   border-right: 0px solid transparent;
-  margin-top: 27.21vw;
+  margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 27vw;
@@ -338,20 +392,22 @@ body {
 
 .black-right-triangle {
   position: absolute;
+  height: 0;
+  width: 0;
   border-top: 30vw solid transparent;
   border-left: 15vw solid #2b2b2b;
-  border-bottom: 0px solid transparent;
+  border-bottom: 1px solid #2b2b2b;
   border-right: 0px solid transparent;
-  margin-left: 35vw;
   margin-top: -30vw;
+  margin-left: 35vw;
 }
 
 .black-left-triangle {
   position: absolute;
   border-top: 30vw solid transparent;
-  border-left: 0px solid transparent;
+  border-left: 0px solid #2b2b2b;
   border-bottom: 0px solid transparent;
-  border-right: 15vw solid #2b2b2b;
+  border-right: calc(15vw + 1px) solid #2b2b2b;
   margin-left: 40.3vw;
   margin-top: -30vw;
 }
@@ -360,6 +416,10 @@ body {
   width: 35vw;
   height: 30vw;
   background-color: #2b2b2b;
+}
+
+.computer-repair {
+  display: relative;
 }
 
 .computer-repair,
@@ -388,7 +448,7 @@ body {
 #mainContainer #supportBox {
   width: 45vw;
   height: 45vw;
-  background-color: #2B2B2B;
+  background-color: #2b2b2b;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -409,7 +469,7 @@ body {
   height: 5vh;
 }
 #mainContainer #supportBox .inputs input {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border: none;
   font-size: medium;
   width: 18.6vw;
@@ -418,22 +478,22 @@ body {
 #mainContainer #supportBox .descInput {
   width: 40vw;
   height: 10vw;
-  color: #2B2B2B;
+  color: #2b2b2b;
   font-weight: bolder;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   font-size: medium;
   font-family: "Trebuchet MS";
   margin-left: auto;
   margin-right: auto;
 }
 #mainContainer #supportBox ::placeholder {
-  color: #2B2B2B;
+  color: #2b2b2b;
   font-weight: bolder;
 }
 #mainContainer #supportBox .supportSubmit {
   width: 25vw;
   height: 5vh;
-  background-color: #7800C6;
+  background-color: #7800c6;
   color: white;
   border: none;
   font-family: "Trebuchet MS";
@@ -454,10 +514,6 @@ body {
   margin-right: auto;
 }
 
-body {
-  padding-top: 15%;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -473,6 +529,7 @@ html {
 body {
   margin: 0;
   background-color: black;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
