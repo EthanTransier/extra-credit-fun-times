@@ -1,81 +1,81 @@
-@import "../utils/size.scss", "../utils/margin.scss";
+@import '../utils/size.scss', '../utils/margin.scss';
 
 #mainContainer {
-    height: 50vw;
+  height: 50vw;
+  display: flex;
+  justify-content: center;
+  margin-top: calc(14vh + 30px);
+  padding-top: 3rem;
+  #supportBox {
+    @include size(45vw, 45vw);
+    background-color: #2b2b2b;
+    box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 
-    #supportBox {
-        @include size(45vw, 45vw);
-        background-color: #2B2B2B;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-
-        .supportHeader {
-            font-size: 30px;
-            @include margin(2vh, 0, 2vh, 0);
-            color: white;
-        }
-
-        .inputs {
-            display: flex;
-            justify-content: space-evenly;
-            @include size(45vw, 5vh);
-
-            input {
-                background-color: #D9D9D9;
-                border: none;
-                font-size: medium;
-                @include size(18.6vw, 6vh);
-            }
-        }
-
-        .descInput {
-            @include size(40vw, 20vh);
-            color: #2B2B2B;
-            font-weight: bolder;
-            background-color: #D9D9D9;
-            font-size: medium;
-            font-family: 'Trebuchet MS';
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 5%;
-        }
-
-        ::placeholder {
-            color: #2B2B2B;
-            font-weight: bolder;
-        }
-
-        .supportSubmit {
-            @include size(25vw, 5vh);
-            background-color: #7800C6;
-            border: none;
-            font-family: 'Trebuchet MS';
-            font-size: medium;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 2.5%;
-            margin-top: 5%;
-            background: linear-gradient(to right, #1698de, #5b58ff) padding-box,
-                linear-gradient(to right, #1698de, #5b58ff) border-box;
-            border: 5px solid transparent;
-            font-size: 20px;
-            border-radius: 1em;
-            color: white;
-        }
-
-        #map-responsive {
-            overflow: hidden;
-            position: relative;
-            height: 40%;
-            margin: auto;
-            background-color: #D9D9D9;
-            width: 80%;
-            margin-bottom: 3.5%;
-        }
-
+    .supportHeader {
+      font-size: 30px;
+      @include margin(2vh, 0, 2vh, 0);
+      color: white;
     }
+
+    .inputs {
+      display: flex;
+      justify-content: space-evenly;
+      @include size(45vw, 5vh);
+
+      input {
+        background-color: #d9d9d9;
+        border: none;
+        font-size: medium;
+        @include size(18.6vw, 6vh);
+      }
+    }
+
+    .descInput {
+      @include size(40vw, 20vh);
+      color: #2b2b2b;
+      font-weight: bolder;
+      background-color: #d9d9d9;
+      font-size: medium;
+      font-family: 'Trebuchet MS';
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5%;
+    }
+
+    ::placeholder {
+      color: #2b2b2b;
+      font-weight: bolder;
+    }
+
+    .supportSubmit {
+      @include size(25vw, 5vh);
+      background-color: #7800c6;
+      border: none;
+      font-family: 'Trebuchet MS';
+      font-size: medium;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2.5%;
+      margin-top: 5%;
+      background: linear-gradient(to right, #1698de, #5b58ff) padding-box,
+        linear-gradient(to right, #1698de, #5b58ff) border-box;
+      border: 5px solid transparent;
+      font-size: 20px;
+      border-radius: 1em;
+      color: white;
+    }
+
+    #map-responsive {
+      overflow: hidden;
+      position: relative;
+      height: 40%;
+      margin: auto;
+      background-color: #d9d9d9;
+      width: 80%;
+      margin-bottom: 3.5%;
+    }
+  }
 }

@@ -1,139 +1,141 @@
-@import "../utils/margin.scss","../utils/padding.scss","../utils/size.scss";
+@import '../utils/margin.scss', '../utils/padding.scss', '../utils/size.scss';
 
-body{
-    background-color: white;
+body {
+  background-color: white;
 }
-.image-container{
-    margin-top: -13vw;
-    @include size(100%, 53vw);
-    background-color: white;
-
-    .opening{
-        @include size(27vw, 26vw);
-        background-color: #161616;
-        color:white;
-        position: absolute;
-        margin-top: 27.2vw;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        h4 {
-            font-size: 1vw;
-        }
-    
-        h3 {
-            font-size: 1.2vw;
-            padding-bottom: 0;
-            padding-top: 0;
-        }
-    
-        h2 {
-            font-size: 2.5vw;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-            font-weight: lighter;
-        }
-        .startInfo{
-            text-align: center;
-            font-weight: lighter;
-            @include margin(5px, 0, 5px, 8%);
-        }
-        .learn{
-            display: flex;
-            justify-content: center;
-        }
-        span{
-            color: #1698DE;
-            font-weight: 800;
-        }
-    }
-    .rightTriangle{
-        position: absolute;
-        @include size(0, 0);
-        border-top: 26vw solid transparent;
-        border-left: 15vw solid #161616;
-        border-bottom: 0px solid transparent;
-        border-right: 0px solid transparent;
-        @include margin(27.21vw, 0, 0, 27vw);
-    }
-}
-.mainPc{
-    margin-left: 50%;
-    padding-top: 100px;
-}
-
-.black-right-triangle {
+.image-container {
+  @include size(100%, calc(calc(100vh - 14vh) - 30px));
+  display: flex;
+  align-items: flex-end;
+  margin-top: calc(14vh + 30px);
+  .opening {
+    @include size(27vw, 26vw);
+    background-color: #161616;
+    color: white;
     position: absolute;
-    border-top: 30vw solid transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h4 {
+      font-size: 1vw;
+    }
+
+    h3 {
+      font-size: 1.2vw;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
+    h2 {
+      font-size: 2.5vw;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: lighter;
+    }
+    .startInfo {
+      text-align: center;
+      font-weight: lighter;
+      @include margin(5px, 0, 5px, 8%);
+    }
+    .learn {
+      display: flex;
+      justify-content: center;
+    }
+    span {
+      color: #1698de;
+      font-weight: 800;
+    }
+  }
+  .rightTriangle {
+    position: absolute;
+    @include size(0, 0);
+    border-top: 26vw solid transparent;
     border-left: 15vw solid #161616;
     border-bottom: 0px solid transparent;
     border-right: 0px solid transparent;
-    @include margin(-30vw, 0, 0, 35vw);
+    @include margin(0, 0, 0, 27vw);
+  }
 }
-.black-left-triangle{
-    position: absolute;
-    border-top: 30vw solid transparent;
-    border-left: 0px solid transparent;
-    border-bottom: 0px solid transparent;
-    border-right: 15vw solid #161616;
-    @include margin(-30vw, 0, 0, 50vw);
+.mainPc {
+  margin-left: 50%;
+  padding-top: 100px;
+}
+
+.black-right-triangle {
+  position: absolute;
+  border-top: 30vw solid transparent;
+  border-left: 15vw solid #161616;
+  border-bottom: 0px solid transparent;
+  border-right: 0px solid transparent;
+  @include margin(-30vw, 0, 0, 35vw);
+}
+.black-left-triangle {
+  position: absolute;
+  border-top: 30vw solid transparent;
+  border-left: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-right: 15vw solid #161616;
+  @include margin(-30vw, 0, 0, 50vw);
 }
 .black-space {
-    @include size(35vw, 30vw);
-    background-color: #161616;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    color: white;
-    justify-content: space-around;
-    justify-items: center;
-    p {
-        font-size: 1.6vw;
-        margin-left:1vh;
-        margin-right:1vh;
-    }
-    h2{
-        font-size: 2vw;
-    }
+  @include size(35vw, 30vw);
+  background-color: #161616;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  justify-content: space-around;
+  justify-items: center;
+  p {
+    font-size: 1.6vw;
+    margin-left: 1vh;
+    margin-right: 1vh;
+  }
+  h2 {
+    font-size: 2vw;
+  }
 }
 
-.computer-repair, .laptop-repair, .virus-removal{
-    margin-left: 0vw;
-        width: 100vw;
+.computer-repair,
+.laptop-repair,
+.virus-removal {
+  margin-left: 0vw;
+  width: 100vw;
 }
 
-.laptop-repair{
-    .black-space {
-        margin-left: 65vw;
-        margin-right: 0
-    }
+.laptop-repair {
+  .black-space {
+    margin-left: 65vw;
+    margin-right: 0;
+  }
 }
 
-.computer-repair.hover, .laptop-repair.hover, .virus-removal.hover{
-    @include size(0vw, 30vw);
-    background-image: url("../../272328.d9fb89f56b4c295a5ef03fb9ec55641a.1600.jpg");
+.computer-repair.hover,
+.laptop-repair.hover,
+.virus-removal.hover {
+  @include size(0vw, 30vw);
+  background-image: url('../../272328.d9fb89f56b4c295a5ef03fb9ec55641a.1600.jpg');
 }
 
 .buttons {
-    background: linear-gradient(to right, #1698DE, #5b58ff) padding-box,
-        linear-gradient(to right,
-            #1698DE,
-            #5b58ff) border-box;
-    border-radius: 1em;
-    border: 5px solid transparent;
-    color: white;
-    font-weight: bold;
-    font-size: 2vw;
-    @include size(20vw, 5vw);
-    margin-left: 6vw;
-    margin-right: auto;
-    margin-top: 3vw;
-    margin-bottom: 3vw;
+  background: linear-gradient(to right, #1698de, #5b58ff) padding-box,
+    linear-gradient(to right, #1698de, #5b58ff) border-box;
+  border-radius: 1em;
+  border: 5px solid transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 2vw;
+  @include size(20vw, 5vw);
+  margin-left: 6vw;
+  margin-right: auto;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
 }
 h2 {
-    font-size: 30px;
-    margin-top: 1vw;
+  font-size: 30px;
+  margin-top: 1vw;
 }
-#size{
-    width: 700px;
-    height: 750px;
+#size {
+  width: auto;
+  height: clamp(18.75rem, -1.339rem + 53.571vw, 46.875rem);
+  margin-left: clamp(3rem, -3.429rem + 17.143vw, 12rem);
 }

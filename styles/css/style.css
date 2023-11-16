@@ -1,8 +1,8 @@
 nav .header-top {
   overflow: hidden;
-  background-color: #1698DE;
+  background-color: #1698de;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0px;
   z-index: 5;
   height: 30px;
@@ -14,16 +14,19 @@ nav .header-top p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 nav .header-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   overflow: hidden;
   background-color: #161616;
   position: fixed;
   width: 100%;
-  top: 0px;
+  top: 30px;
   z-index: 3;
-  box-shadow: 0px 0px 20px #1698DE;
+  box-shadow: 0px 0px 20px #1698de;
+  height: 14vh;
 }
 nav .header-body a {
-  float: left;
   color: white;
   text-align: center;
   padding: 12px;
@@ -36,13 +39,10 @@ nav .dropdown {
   display: none;
 }
 nav .header-tags {
-  float: right;
-  margin-top: 55px;
-  margin-right: 20px;
   font-weight: lighter;
+  margin-right: 2rem;
 }
 nav .header-tags a {
-  float: left;
   color: white;
   text-align: center;
   padding-top: 12px;
@@ -64,13 +64,9 @@ nav .header-tags a:hover {
   font-size: 21px;
   border-style: solid;
   border-width: 2px;
-  border-image: linear-gradient(to right, #008080, #1698DE) 1;
+  border-image: linear-gradient(to right, #008080, #1698de) 1;
 }
 nav .logo {
-  margin-top: 20px;
-  margin-right: 0;
-  margin-bottom: -15px;
-  margin-left: 0;
   width: 260px;
   height: 90px;
 }
@@ -85,7 +81,6 @@ nav .logo {
     margin-right: 20px;
     font-weight: lighter;
     position: relative;
-    float: right;
   }
   nav .dropdown a:hover {
     background-color: #ddd;
@@ -124,10 +119,11 @@ body {
 }
 
 .image-container {
-  margin-top: -13vw;
   width: 100%;
-  height: 53vw;
-  background-color: white;
+  height: calc(86vh - 30px);
+  display: flex;
+  align-items: flex-end;
+  margin-top: calc(14vh + 30px);
 }
 .image-container .opening {
   width: 27vw;
@@ -135,7 +131,6 @@ body {
   background-color: #161616;
   color: white;
   position: absolute;
-  margin-top: 27.2vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -166,7 +161,7 @@ body {
   justify-content: center;
 }
 .image-container .opening span {
-  color: #1698DE;
+  color: #1698de;
   font-weight: 800;
 }
 .image-container .rightTriangle {
@@ -177,7 +172,7 @@ body {
   border-left: 15vw solid #161616;
   border-bottom: 0px solid transparent;
   border-right: 0px solid transparent;
-  margin-top: 27.21vw;
+  margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 27vw;
@@ -232,7 +227,9 @@ body {
   font-size: 2vw;
 }
 
-.computer-repair, .laptop-repair, .virus-removal {
+.computer-repair,
+.laptop-repair,
+.virus-removal {
   margin-left: 0vw;
   width: 100vw;
 }
@@ -242,14 +239,16 @@ body {
   margin-right: 0;
 }
 
-.computer-repair.hover, .laptop-repair.hover, .virus-removal.hover {
+.computer-repair.hover,
+.laptop-repair.hover,
+.virus-removal.hover {
   width: 0vw;
   height: 30vw;
   background-image: url("../../272328.d9fb89f56b4c295a5ef03fb9ec55641a.1600.jpg");
 }
 
 .buttons {
-  background: linear-gradient(to right, #1698DE, #5b58ff) padding-box, linear-gradient(to right, #1698DE, #5b58ff) border-box;
+  background: linear-gradient(to right, #1698de, #5b58ff) padding-box, linear-gradient(to right, #1698de, #5b58ff) border-box;
   border-radius: 1em;
   border: 5px solid transparent;
   color: white;
@@ -269,8 +268,9 @@ h2 {
 }
 
 #size {
-  width: 700px;
-  height: 750px;
+  width: auto;
+  height: clamp(18.75rem, -1.339rem + 53.571vw, 46.875rem);
+  margin-left: clamp(3rem, -3.429rem + 17.143vw, 12rem);
 }
 
 footer {
@@ -329,6 +329,11 @@ footer .footer-right img {
   height: 35vh;
 }
 
+.serviceContainer {
+  margin-top: calc(14vh + 30px);
+  padding-top: 2rem;
+}
+
 .info, .info-bottom {
   transition: all 2s ease;
   display: flex;
@@ -346,22 +351,22 @@ footer .footer-right img {
 .info-bottom .h1 {
   margin-top: 15vh;
   font-size: 3vw;
-  text-shadow: 0px 0px 10px #1698DE;
+  text-shadow: 0px 0px 10px #1698de;
 }
 .info-bottom .h2 {
   font-size: 1vw;
-  text-shadow: 0px 0px 10px #1698DE;
+  text-shadow: 0px 0px 10px #1698de;
 }
 
 .right {
   display: block;
   width: 30vw;
   height: 20vw;
-  background-color: #2B2B2B;
+  background-color: #2b2b2b;
   color: white;
   text-align: center;
-  border-top: 4px solid #1698DE;
-  border-bottom: 4px solid #1698DE;
+  border-top: 4px solid #1698de;
+  border-bottom: 4px solid #1698de;
 }
 .right p {
   margin-top: -15px;
@@ -369,7 +374,7 @@ footer .footer-right img {
   font-weight: lighter;
 }
 .right button {
-  background: linear-gradient(to right, #1698DE, #5b58ff) padding-box, linear-gradient(to right, #1698DE, #5b58ff) border-box;
+  background: linear-gradient(to right, #1698de, #5b58ff) padding-box, linear-gradient(to right, #1698de, #5b58ff) border-box;
   padding: 10px 20px 10px 20px;
   color: white;
   border-radius: 2em;
@@ -380,12 +385,12 @@ footer .footer-right img {
 }
 
 #rightOne {
-  border: 4px solid #1698DE;
+  border: 4px solid #1698de;
   border-radius: 10px;
 }
 
 #rightTwo {
-  border: 4px solid #1698DE;
+  border: 4px solid #1698de;
   border-radius: 10px;
 }
 
@@ -414,17 +419,17 @@ footer .footer-right img {
 }
 
 #bottom.hover {
-  border: 4px solid #1698DE;
+  border: 4px solid #1698de;
   border-radius: 10px;
-  box-shadow: 0px 0px 30px #1698DE;
+  box-shadow: 0px 0px 30px #1698de;
 }
 
 #rightOne.hover {
-  box-shadow: 0px 0px 30px #1698DE;
+  box-shadow: 0px 0px 30px #1698de;
 }
 
 #rightTwo.hover {
-  box-shadow: 0px 0px 30px #1698DE;
+  box-shadow: 0px 0px 30px #1698de;
 }
 
 .hidden.hover {
@@ -434,10 +439,6 @@ footer .footer-right img {
 
 .h1.hover {
   display: none;
-}
-
-body {
-  padding-top: 20%;
 }
 
 h3 {
@@ -452,11 +453,13 @@ h3 {
   height: 50vw;
   display: flex;
   justify-content: center;
+  margin-top: calc(14vh + 30px);
+  padding-top: 3rem;
 }
 #mainContainer #supportBox {
   width: 45vw;
   height: 45vw;
-  background-color: #2B2B2B;
+  background-color: #2b2b2b;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -477,7 +480,7 @@ h3 {
   height: 5vh;
 }
 #mainContainer #supportBox .inputs input {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border: none;
   font-size: medium;
   width: 18.6vw;
@@ -486,9 +489,9 @@ h3 {
 #mainContainer #supportBox .descInput {
   width: 40vw;
   height: 20vh;
-  color: #2B2B2B;
+  color: #2b2b2b;
   font-weight: bolder;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   font-size: medium;
   font-family: "Trebuchet MS";
   margin-left: auto;
@@ -496,13 +499,13 @@ h3 {
   margin-top: 5%;
 }
 #mainContainer #supportBox ::placeholder {
-  color: #2B2B2B;
+  color: #2b2b2b;
   font-weight: bolder;
 }
 #mainContainer #supportBox .supportSubmit {
   width: 25vw;
   height: 5vh;
-  background-color: #7800C6;
+  background-color: #7800c6;
   border: none;
   font-family: "Trebuchet MS";
   font-size: medium;
@@ -521,7 +524,7 @@ h3 {
   position: relative;
   height: 40%;
   margin: auto;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   width: 80%;
   margin-bottom: 3.5%;
 }
@@ -539,10 +542,11 @@ body {
 }
 
 .image-container {
-  margin-top: -13vw;
   width: 100%;
-  height: 53vw;
-  background-color: white;
+  height: calc(86vh - 30px);
+  display: flex;
+  align-items: flex-end;
+  margin-top: calc(14vh + 30px);
 }
 .image-container .opening {
   width: 27vw;
@@ -550,7 +554,6 @@ body {
   background-color: #161616;
   color: white;
   position: absolute;
-  margin-top: 27.2vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -581,7 +584,7 @@ body {
   justify-content: center;
 }
 .image-container .opening span {
-  color: #1698DE;
+  color: #1698de;
   font-weight: 800;
 }
 .image-container .rightTriangle {
@@ -592,7 +595,7 @@ body {
   border-left: 15vw solid #161616;
   border-bottom: 0px solid transparent;
   border-right: 0px solid transparent;
-  margin-top: 27.21vw;
+  margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 27vw;
@@ -647,7 +650,9 @@ body {
   font-size: 2vw;
 }
 
-.computer-repair, .laptop-repair, .virus-removal {
+.computer-repair,
+.laptop-repair,
+.virus-removal {
   margin-left: 0vw;
   width: 100vw;
 }
@@ -657,14 +662,16 @@ body {
   margin-right: 0;
 }
 
-.computer-repair.hover, .laptop-repair.hover, .virus-removal.hover {
+.computer-repair.hover,
+.laptop-repair.hover,
+.virus-removal.hover {
   width: 0vw;
   height: 30vw;
   background-image: url("../../272328.d9fb89f56b4c295a5ef03fb9ec55641a.1600.jpg");
 }
 
 .buttons {
-  background: linear-gradient(to right, #1698DE, #5b58ff) padding-box, linear-gradient(to right, #1698DE, #5b58ff) border-box;
+  background: linear-gradient(to right, #1698de, #5b58ff) padding-box, linear-gradient(to right, #1698de, #5b58ff) border-box;
   border-radius: 1em;
   border: 5px solid transparent;
   color: white;
@@ -684,19 +691,22 @@ h2 {
 }
 
 #size {
-  width: 700px;
-  height: 750px;
+  width: auto;
+  height: clamp(18.75rem, -1.339rem + 53.571vw, 46.875rem);
+  margin-left: clamp(3rem, -3.429rem + 17.143vw, 12rem);
 }
 
 #mainContainer {
   height: 50vw;
   display: flex;
   justify-content: center;
+  margin-top: calc(14vh + 30px);
+  padding-top: 3rem;
 }
 #mainContainer #supportBox {
   width: 45vw;
   height: 45vw;
-  background-color: #2B2B2B;
+  background-color: #2b2b2b;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -717,7 +727,7 @@ h2 {
   height: 5vh;
 }
 #mainContainer #supportBox .inputs input {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border: none;
   font-size: medium;
   width: 18.6vw;
@@ -726,9 +736,9 @@ h2 {
 #mainContainer #supportBox .descInput {
   width: 40vw;
   height: 20vh;
-  color: #2B2B2B;
+  color: #2b2b2b;
   font-weight: bolder;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   font-size: medium;
   font-family: "Trebuchet MS";
   margin-left: auto;
@@ -736,13 +746,13 @@ h2 {
   margin-top: 5%;
 }
 #mainContainer #supportBox ::placeholder {
-  color: #2B2B2B;
+  color: #2b2b2b;
   font-weight: bolder;
 }
 #mainContainer #supportBox .supportSubmit {
   width: 25vw;
   height: 5vh;
-  background-color: #7800C6;
+  background-color: #7800c6;
   border: none;
   font-family: "Trebuchet MS";
   font-size: medium;
@@ -761,7 +771,7 @@ h2 {
   position: relative;
   height: 40%;
   margin: auto;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   width: 80%;
   margin-bottom: 3.5%;
 }
@@ -819,6 +829,35 @@ h2 {
   }
   #subpagesMain {
     margin-top: 5%;
+  }
+}
+@media (max-width: 900px) {
+  .image-container .rightTriangle {
+    display: none;
+  }
+  .image-container .opening {
+    height: calc(86vh - 30px);
+    margin-top: calc(14vh + 30px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+  }
+  .image-container .opening .startInfo {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+  .image-container .opening .startTitle {
+    font-size: 1.75rem;
+  }
+  .image-container .opening .startSubTitle {
+    font-size: 1.25rem;
+  }
+  .image-container .opening .buttons {
+    padding: 0;
+    margin: 0;
   }
 }
 @media (max-width: 870px) {

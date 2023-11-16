@@ -1,130 +1,126 @@
-@import "../utils/margin.scss", "../utils/size.scss", "../utils/padding.scss";
-$main-color: #1698DE;
+@import '../utils/margin.scss', '../utils/size.scss', '../utils/padding.scss';
+$main-color: #1698de;
 $secondary-color: #161616;
 
-
-
-nav{
-    .header-top{
-        overflow: hidden;
-        background-color: $main-color;
-        position: fixed;
-        width: 100%;
-        top: 0px;
-        z-index: 5;
-        height: 30px;
-        p{
-            color: white;
-            text-align: center;
-            margin-top: 5px;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
+nav {
+  .header-top {
+    overflow: hidden;
+    background-color: $main-color;
+    position: fixed;
+    width: 100vw;
+    top: 0px;
+    z-index: 5;
+    height: 30px;
+    p {
+      color: white;
+      text-align: center;
+      margin-top: 5px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
     }
-    .header-body{
-        overflow: hidden;
-        background-color: $secondary-color;
-        position: fixed;
-        width: 100%;
-        top: 0px;
-        z-index: 3;
-        box-shadow: 0px 0px 20px $main-color;
-        a {
-            float: left;
-            color: white;
-            text-align: center;
-            padding: 12px;
-            text-decoration: none;
-            font-size: 18px;
-            line-height: 25px;
-            border-radius: 5px;
-        }
+  }
+  .header-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: $secondary-color;
+    position: fixed;
+    width: 100%;
+    top: 30px;
+    z-index: 3;
+    box-shadow: 0px 0px 20px $main-color;
+    height: 14vh;
+    a {
+      color: white;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 25px;
+      border-radius: 5px;
     }
-        .dropdown {
-            display: none;
-        }
-    .header-tags{
-        float: right;
-        margin-top: 55px;
-        margin-right: 20px;
-        font-weight: lighter;
-        a {
-            float: left;
-            color: white;
-            text-align: center;
-            @include padding(12px, 5px, 12px, 5px);
-            text-decoration: none;
-            font-size: 18px;
-            line-height: 25px;
-            border-radius: 5px;
-            width: 100px;
-            margin-bottom: -10px;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-        a:hover {
-            background-color: #343434;
-            font-weight: bolder;
-            transition: 0.6s;
-            font-size: 21px;
-            border-style: solid;
-            border-width: 2px;
-            border-image: linear-gradient(to right, #008080, $main-color) 1;
-        }
+  }
+  .dropdown {
+    display: none;
+  }
+  .header-tags {
+    font-weight: lighter;
+    margin-right: 2rem;
+    a {
+      color: white;
+      text-align: center;
+      @include padding(12px, 5px, 12px, 5px);
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 25px;
+      border-radius: 5px;
+      width: 100px;
+      margin-bottom: -10px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
     }
-    .logo {
-        @include margin(20px, 0, -15px, 0);
-        @include size(260px, 90px);
+    a:hover {
+      background-color: #343434;
+      font-weight: bolder;
+      transition: 0.6s;
+      font-size: 21px;
+      border-style: solid;
+      border-width: 2px;
+      border-image: linear-gradient(to right, #008080, $main-color) 1;
     }
+  }
+  .logo {
+    @include size(260px, 90px);
+  }
 }
 
-
 @media (max-width: 640px) {
-    .header-tags {
-        display: none;
+  .header-tags {
+    display: none;
+  }
+
+  nav {
+    .dropdown {
+      display: block;
+      margin-top: 55px;
+      margin-right: 20px;
+      font-weight: lighter;
+      position: relative;
+      a:hover {
+        background-color: #ddd;
+      }
     }
 
-        nav {
-            .dropdown {
-                display: block;
-                margin-top: 55px;
-                margin-right: 20px;
-                font-weight: lighter;
-                position: relative;
-                float: right;
-                a:hover {
-                    background-color: #ddd;
-                }
-            }
-    
-            .dropbtn {
-                display: block;
-                background-color: black;
-                color: white;
-                padding: 16px;
-                font-size: 16px;
-                border: none;
-            }
-    
-            .dropbtn:hover,
-            .dropbtn:focus {
-                background-color: black;
-            }
-    
-            .dropdown-content {
-                display: none;
-                position: fixed;
-                background-color: #f1f1f1;
-                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                @include size(104px, 160px);
-                a {
-                    color: rgb(12, 9, 9);
-                    text-decoration: none;
-                    display: block;
-                }
-    
-            }
-    
-            .show {
-                display: block;
-            }
-        }
+    .dropbtn {
+      display: block;
+      background-color: black;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+      background-color: black;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: fixed;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      @include size(104px, 160px);
+      a {
+        color: rgb(12, 9, 9);
+        text-decoration: none;
+        display: block;
+      }
+    }
+
+    .show {
+      display: block;
+    }
+  }
 }
