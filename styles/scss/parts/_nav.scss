@@ -71,7 +71,8 @@ nav {
     }
   }
   .logo {
-    @include size(260px, 90px);
+    width: clamp(11.25rem, -3.75rem + 80vw, 16.25rem);
+    aspect-ratio: 26/9;
   }
 }
 

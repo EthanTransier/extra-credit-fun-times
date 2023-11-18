@@ -59,61 +59,72 @@ body {
   margin-left: 50%;
   padding-top: 100px;
 }
-
-.black-right-triangle {
-  position: absolute;
-  border-top: 30vw solid transparent;
-  border-left: 15vw solid #161616;
-  border-bottom: 0px solid transparent;
-  border-right: 0px solid transparent;
-  @include margin(-30vw, 0, 0, 35vw);
-}
-.black-left-triangle {
-  position: absolute;
-  border-top: 30vw solid transparent;
-  border-left: 0px solid transparent;
-  border-bottom: 0px solid transparent;
-  border-right: 15vw solid #161616;
-  @include margin(-30vw, 0, 0, 50vw);
-}
-.black-space {
-  @include size(35vw, 30vw);
-  background-color: #161616;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  color: white;
-  justify-content: space-around;
-  justify-items: center;
-  p {
-    font-size: 1.6vw;
-    margin-left: 1vh;
-    margin-right: 1vh;
+// Home Page Desktop
+.desktopDesign {
+  .black-right-triangle {
+    position: absolute;
+    border-top: 30vw solid transparent;
+    border-left: 15vw solid #161616;
+    border-bottom: 0px solid transparent;
+    border-right: 0px solid transparent;
+    @include margin(-30vw, 0, 0, 35vw);
   }
-  h2 {
-    font-size: 2vw;
+  .black-left-triangle {
+    position: absolute;
+    border-top: 30vw solid transparent;
+    border-left: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-right: 15vw solid #161616;
+    @include margin(-30vw, 0, 0, 50vw);
   }
-}
-
-.computer-repair,
-.laptop-repair,
-.virus-removal {
-  margin-left: 0vw;
-  width: 100vw;
-}
-
-.laptop-repair {
   .black-space {
-    margin-left: 65vw;
-    margin-right: 0;
+    @include size(35vw, 30vw);
+    background-color: #161616;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    justify-content: space-around;
+    justify-items: center;
+    p {
+      font-size: 1.6vw;
+      margin-left: 1vh;
+      margin-right: 1vh;
+    }
+    h2 {
+      font-size: 2vw;
+    }
+  }
+
+  .computer-repair,
+  .laptop-repair,
+  .virus-removal {
+    margin-left: 0vw;
+    width: 100vw;
+  }
+
+  .laptop-repair {
+    .black-space {
+      margin-left: 65vw;
+      margin-right: 0;
+    }
+  }
+
+  .computer-repair.hover,
+  .laptop-repair.hover,
+  .virus-removal.hover {
+    @include size(0vw, 30vw);
+    background-image: url('../../272328.d9fb89f56b4c295a5ef03fb9ec55641a.1600.jpg');
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-top: 1vw;
   }
 }
-
-.computer-repair.hover,
-.laptop-repair.hover,
-.virus-removal.hover {
-  @include size(0vw, 30vw);
-  background-image: url('../../272328.d9fb89f56b4c295a5ef03fb9ec55641a.1600.jpg');
+// Home Page Mobile
+.mobileDesign {
+  display: none;
 }
 
 .buttons {
@@ -129,10 +140,6 @@ body {
   margin-right: auto;
   margin-top: 3vw;
   margin-bottom: 3vw;
-}
-h2 {
-  font-size: 30px;
-  margin-top: 1vw;
 }
 #size {
   width: auto;

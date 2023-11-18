@@ -67,8 +67,8 @@ nav .header-tags a:hover {
   border-image: linear-gradient(to right, #008080, #1698de) 1;
 }
 nav .logo {
-  width: 260px;
-  height: 90px;
+  width: clamp(11.25rem, -3.75rem + 80vw, 16.25rem);
+  aspect-ratio: 26/9;
 }
 
 @media (max-width: 640px) {
@@ -183,7 +183,7 @@ body {
   padding-top: 100px;
 }
 
-.black-right-triangle {
+.desktopDesign .black-right-triangle {
   position: absolute;
   border-top: 30vw solid transparent;
   border-left: 15vw solid #161616;
@@ -194,8 +194,7 @@ body {
   margin-bottom: 0;
   margin-left: 35vw;
 }
-
-.black-left-triangle {
+.desktopDesign .black-left-triangle {
   position: absolute;
   border-top: 30vw solid transparent;
   border-left: 0px solid transparent;
@@ -206,8 +205,7 @@ body {
   margin-bottom: 0;
   margin-left: 50vw;
 }
-
-.black-space {
+.desktopDesign .black-space {
   width: 35vw;
   height: 30vw;
   background-color: #161616;
@@ -218,33 +216,38 @@ body {
   justify-content: space-around;
   justify-items: center;
 }
-.black-space p {
+.desktopDesign .black-space p {
   font-size: 1.6vw;
   margin-left: 1vh;
   margin-right: 1vh;
 }
-.black-space h2 {
+.desktopDesign .black-space h2 {
   font-size: 2vw;
 }
-
-.computer-repair,
-.laptop-repair,
-.virus-removal {
+.desktopDesign .computer-repair,
+.desktopDesign .laptop-repair,
+.desktopDesign .virus-removal {
   margin-left: 0vw;
   width: 100vw;
 }
-
-.laptop-repair .black-space {
+.desktopDesign .laptop-repair .black-space {
   margin-left: 65vw;
   margin-right: 0;
 }
-
-.computer-repair.hover,
-.laptop-repair.hover,
-.virus-removal.hover {
+.desktopDesign .computer-repair.hover,
+.desktopDesign .laptop-repair.hover,
+.desktopDesign .virus-removal.hover {
   width: 0vw;
   height: 30vw;
   background-image: url("../../272328.d9fb89f56b4c295a5ef03fb9ec55641a.1600.jpg");
+}
+.desktopDesign h2 {
+  font-size: 30px;
+  margin-top: 1vw;
+}
+
+.mobileDesign {
+  display: none;
 }
 
 .buttons {
@@ -260,11 +263,6 @@ body {
   margin-right: auto;
   margin-top: 3vw;
   margin-bottom: 3vw;
-}
-
-h2 {
-  font-size: 30px;
-  margin-top: 1vw;
 }
 
 #size {
@@ -606,7 +604,7 @@ body {
   padding-top: 100px;
 }
 
-.black-right-triangle {
+.desktopDesign .black-right-triangle {
   position: absolute;
   border-top: 30vw solid transparent;
   border-left: 15vw solid #161616;
@@ -617,8 +615,7 @@ body {
   margin-bottom: 0;
   margin-left: 35vw;
 }
-
-.black-left-triangle {
+.desktopDesign .black-left-triangle {
   position: absolute;
   border-top: 30vw solid transparent;
   border-left: 0px solid transparent;
@@ -629,8 +626,7 @@ body {
   margin-bottom: 0;
   margin-left: 50vw;
 }
-
-.black-space {
+.desktopDesign .black-space {
   width: 35vw;
   height: 30vw;
   background-color: #161616;
@@ -641,33 +637,38 @@ body {
   justify-content: space-around;
   justify-items: center;
 }
-.black-space p {
+.desktopDesign .black-space p {
   font-size: 1.6vw;
   margin-left: 1vh;
   margin-right: 1vh;
 }
-.black-space h2 {
+.desktopDesign .black-space h2 {
   font-size: 2vw;
 }
-
-.computer-repair,
-.laptop-repair,
-.virus-removal {
+.desktopDesign .computer-repair,
+.desktopDesign .laptop-repair,
+.desktopDesign .virus-removal {
   margin-left: 0vw;
   width: 100vw;
 }
-
-.laptop-repair .black-space {
+.desktopDesign .laptop-repair .black-space {
   margin-left: 65vw;
   margin-right: 0;
 }
-
-.computer-repair.hover,
-.laptop-repair.hover,
-.virus-removal.hover {
+.desktopDesign .computer-repair.hover,
+.desktopDesign .laptop-repair.hover,
+.desktopDesign .virus-removal.hover {
   width: 0vw;
   height: 30vw;
   background-image: url("../../272328.d9fb89f56b4c295a5ef03fb9ec55641a.1600.jpg");
+}
+.desktopDesign h2 {
+  font-size: 30px;
+  margin-top: 1vw;
+}
+
+.mobileDesign {
+  display: none;
 }
 
 .buttons {
@@ -683,11 +684,6 @@ body {
   margin-right: auto;
   margin-top: 3vw;
   margin-bottom: 3vw;
-}
-
-h2 {
-  font-size: 30px;
-  margin-top: 1vw;
 }
 
 #size {
@@ -886,6 +882,135 @@ h2 {
     margin-bottom: 1vh;
   }
 }
+@media (max-width: 600px) {
+  .image-container {
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+  }
+  .image-container .opening {
+    width: clamp(15.313rem, -1.563rem + 90vw, 29.375rem);
+    height: 200px;
+    aspect-ratio: 2/1;
+    margin-top: 0;
+    gap: 0;
+    justify-content: space-evenly;
+    position: static;
+  }
+  .image-container .opening .startInfo {
+    font-size: 0.75rem;
+  }
+  .image-container .opening .startTitle {
+    font-size: 1.5rem;
+  }
+  .image-container .opening .startSubTitle {
+    font-size: 1rem;
+  }
+  .image-container .mainPc {
+    margin: 0;
+    padding: 0;
+  }
+  .image-container .mainPc #size {
+    margin-left: 0;
+    width: 60vw;
+    height: auto;
+  }
+  .black-right-triangle {
+    display: none;
+  }
+  .black-left-triangle {
+    display: none;
+  }
+  .desktopDesign {
+    display: none;
+  }
+  .mobileDesign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .mobileDesign .mobileLeft {
+    margin-right: clamp(0rem, -45rem + 160vw, 15rem);
+  }
+  .mobileDesign .mobileRight {
+    margin-left: clamp(0rem, -45rem + 160vw, 15rem);
+  }
+  .mobileDesign .mobileContent {
+    width: 40vw;
+    background-color: #161616;
+    color: white;
+  }
+  .mobileDesign .mobileContent .innerContent {
+    padding: 1rem;
+  }
+  .mobileDesign .mobileContent .innerContent h2 {
+    font-size: clamp(1rem, 0.75rem + 1.333vw, 1.25rem);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .mobileDesign .mobileContent .innerContent p {
+    padding-left: 0.5rem;
+    font-size: clamp(0.75rem, 0.5rem + 1.333vw, 1rem);
+  }
+  .mobileDesign .mobileContent .innerContent .buttonContainer {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobileDesign .mobileContent .innerContent .buttonContainer .buttons {
+    margin: 0;
+  }
+  .mobileDesign .mobileContent .image {
+    width: 100%;
+    aspect-ratio: 3/2;
+    background-image: url(../../272328.d9fb89f56b4c295a5ef03fb9ec55641a.1600.jpg);
+    background-repeat: none;
+    background-size: cover;
+  }
+  .mobileDesign .mobileContent .img1 {
+    background-position: 10% 50%;
+  }
+  .mobileDesign .mobileContent .img2 {
+    background-position: 50% 10%;
+  }
+  .mobileDesign .mobileContent .img3 {
+    background-position: 40% 30%;
+  }
+  footer {
+    flex-direction: column;
+    height: auto;
+  }
+  footer .footer-left {
+    width: 100vw;
+    align-items: center;
+    margin-top: 0.75rem;
+  }
+  footer .footer-left .footer-row a {
+    font-size: 1.25rem;
+  }
+  footer .footer-left .footer-column {
+    font-size: 1rem;
+    margin: 0;
+    width: 75%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    text-align: center;
+  }
+  footer .footer-right {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .footer-right img {
+    width: clamp(15.625rem, -1.531rem + 91.5vw, 27.063rem);
+    height: auto;
+  }
+}
 @media (max-width: 560px) {
   #subpagesMain {
     margin-top: 10%;
@@ -917,6 +1042,11 @@ h2 {
     font-size: 2vw;
     height: 8vw;
     width: 12vh;
+  }
+}
+@media (max-width: 450px) {
+  .mobileDesign .mobileContent {
+    width: 80vw;
   }
 }
 @media (max-width: 400px) {

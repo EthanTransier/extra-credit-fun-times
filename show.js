@@ -32,7 +32,6 @@ function lapAnimate() {
 }
 
 function virAnimate() {
-
     if(virLength <= max) {
         virus.style.width = `${virLength}vw`;
         virLength+=.5;
@@ -73,13 +72,15 @@ window.addEventListener("scroll", function() {
 });
 
 function myFunction() {
+    console.log('dropdown')
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-     document.querySelector(".dropbtn").addEventListener("click", function () {
-        document.querySelector(".dropdown-content").classList.toggle("show");
-    });
-  }
-}
+
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropbtn')) {
+//      document.querySelector(".dropbtn").addEventListener("click", function () {
+//         document.querySelector(".dropdown-content").classList.toggle("show");
+//     });
+//   }
+// }
