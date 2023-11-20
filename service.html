@@ -6,70 +6,126 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/css/style.css">
-    <title>Document</title>
+    <title>Quiktek | Service</title>
+    <link rel="icon" type="image/x-icon" href="./new_non_back-removebg-preview.png">
 </head>
 
 <body>
-    <nav>
-        <div class="header-top">
-            <p>Call us today 602-290-1586</p>
-        </div>
-        <div class="header-body">
-            <div><a href=""><img class="logo" src="./finall-removebg-preview.png"></a></div>
-            <div class="header-tags">
-                <a href="index.html">Home</a>
-                <a href="service.html">Services</a>
-                <a href="support.html">Support</a>
-            </div>
-        </div>
-    </nav>
-
-
-        <div class="info">
-            <div class="right">
-                <h3 class="hidden serviceTitle">Desktop Repair</h3>
-                <p class="hidden serviceInfo">
-                    Whether you are a gamer or a casual user, we can make sure your desktop is at the top of its game. Top quality motherboards, CPU's, memory, power supplies and drives are in stock. Plus monitors, speakers, mice and keyboards to enrich your computing experience.
-                </p>
-                <a href="support.html" class="hidden"><button class="buttons">Contact us</button></a>
-            </div>
-            <div class="right">
-                <h3 class="hidden serviceTitle">Laptop Repair</h3>
-                <p class="hidden serviceInfo">
-                    We can fix any problem with any brand of laptop, including Apple, Compaq, Dell, HP, Acer, eMachines, Toshiba, Sony, IBM, Gateway, and many others.
-                </p>
-                <a href="support.html" class="hidden"><button class="buttons">Contact us</button></a>
-            </div>
-        </div>
-
-        <div class="info-bottom">
-            <div class="right">
-                <h1 class="h1 serviceTitle">What we offer</h1>
-                <h3 class="hidden serviceTitle">Virus removal</h3>
-                <p class="hidden serviceInfo">
-                    Virus and spyware (malware) infections are the most common cause of computer crashes and slowdowns. In nearly every case, our experienced technicians can remove viruses and spyware and preserve your data in the process. Don't spend your weekend trying to clean your computer yourself. The $35 to $65 you spend to have us do it will be money well spent.
-                </p>
-                <br>
-                <a href="support.html" class="hidden"><button class="buttons">Contact us</button></a>
-            </div>
-        </div>
-
-        <br><br>
-        <footer>
-            <div class="footer-top">
-                <div class="footer-row">
-                    <a href="index.html">Home</a>
-                    <a href="service.html">Services</a>
-                    <a href="support.html">Support</a>
+            <nav>
+                <div class="header-top">
+                    <p>Call us today 602-290-1586</p>
                 </div>
-                <img class=img src="finall-removebg-preview.png" alt="">
+                <div class="header-body">
+                    <div><a href=""><img class="logo" src="./finall-removebg-preview.png"></a></div>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="index.html">Home</a>
+                            <a href="service.html">Services</a>
+                            <a href="support.html">Support</a>
+                        </div>
+                    </div>
+                    <div class="header-tags">
+                        <a href="index.html">Home</a>
+                        <a href="service.html">Services</a>
+                        <a href="support.html">Support</a>
+                    </div>
+                </div>
+            </nav>
+        <section class="serviceMobileContainer">
+            <div class="info">
+                <h1 class="startTitle">Services We Offer!</h1>
             </div>
-            <div class="footer-bottom">
-                <p>15224 N 59th Ave Suite 4 Glendale AZ
-                    Dave@QuikTekComputer.com</p>
+            <div class="info info1 hide">
+                <h3 class="subTitle">Desktop/Laptop Repair</h3>
+                <p>Whether you are a gamer or a casual user, we can make sure your desktop is at the top of its game. Top
+                quality motherboards, CPU's, memory, power supplies and drives are in stock. Plus monitors, speakers, mice
+                and keyboards to enrich your computing experience. We can also fix any problem with any brand of laptop,
+                including Apple, Compaq, Dell, HP, Acer, eMachines,
+                Toshiba, Sony, IBM, Gateway, and many others.</p>
             </div>
-        </footer>
+            <div class="info info2 hide">
+                <h3 class="subTitle">Computer Upgrades</h3>
+                <p>No matter who you are, your computer will become outdated at some point in the future. Our evolving world is
+                coming out with new and imporoved features and parts every day. Come on down and get the latest in tech to
+                improve and upgrade your computer today!</p>
+            </div>
+            <div class="info info3 hide">
+                <h3 class="subTitle">Virus removal</h3>
+                <p>Virus and spyware (malware) infections are the most common cause of computer crashes and slowdowns. In
+                nearly every case, our experienced technicians can remove viruses and spyware and preserve your data in the
+                process. Don't spend your weekend trying to clean your computer yourself. The $35 to $65 you spend to have
+                us do it will be money well spent.</p>
+            </div>
+        </section>
+        <section class="serviceContainer">
+            <div class="startingContainer" id="start">
+                <h1 class="h1">Services We Offer!</h1>
+            </div>
+            <div class="info">
+                <div class="right" id="rightOne">
+                    <h3 class="hidden">Desktop/Laptop Repair</h3>
+                    <p class="hidden">
+                        Whether you are a gamer or a casual user, we can make sure your desktop is at the top of its game. Top
+                        quality motherboards, CPU's, memory, power supplies and drives are in stock. Plus monitors, speakers, mice
+                        and keyboards to enrich your computing experience. We can also fix any problem with any brand of laptop,
+                        including Apple, Compaq, Dell, HP, Acer, eMachines,
+                        Toshiba, Sony, IBM, Gateway, and many others.
+                    </p>
+                    <a href="./desktop.html" class="hidden"><button>Contact us</button></a>
+                </div>
+                <div class="right" id="rightTwo">
+                    <h3 class="hidden">Computer Upgrades</h3>
+                    <p class="hidden">
+                        No matter who you are, your computer will become outdated at some point in the future. Our evolving world is
+                        coming out with new and imporoved features and parts every day. Come on down and get the latest in tech to
+                        improve and upgrade your computer today!
+                    </p>
+                    <a href="./upgrade.html" class="hidden"><button>Contact us</button></a>
+                </div>
+            </div>
+            
+            <div class="info-bottom">
+                <div class="right" id="bottom">
+                    <h3 class="hidden">Virus removal</h3>
+                    <p class="hidden">
+                        Virus and spyware (malware) infections are the most common cause of computer crashes and slowdowns. In
+                        nearly every case, our experienced technicians can remove viruses and spyware and preserve your data in the
+                        process. Don't spend your weekend trying to clean your computer yourself. The $35 to $65 you spend to have
+                        us do it will be money well spent.
+                    </p>
+                    <br>
+                    <a href="./virus.html" class="hidden"><button>Contact us</button></a>
+                </div>
+            </div>
+            
+            <br><br>
+        </section>
+        
+<footer>
+    <div class="footer-left">
+        <div class="footer-row">
+            <a href="">Home</a>
+            <a href="">Support</a>
+            <a href="">Services</a>
+        </div>
+        <br>
+        <div class="footer-column">
+            <p>
+                15224 N 59th Ave Suite 4 Glendale AZ
+            </p>
+            <p>
+                Dave@QuikTekComputer.com
+            </p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <img src="./finall-removebg-preview.png" alt="">
+    </div>
+
+</footer>
         <script src="reveal.js"></script>
+        <script src="show.js"></script>
 </body>
 
 </html>

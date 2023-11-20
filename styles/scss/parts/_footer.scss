@@ -1,35 +1,59 @@
-@import "../utils/size.scss";
+@import "../utils/size.scss", "../utils/padding.scss";
 
-@mixin flex($content){
+@mixin flex($content) {
     display: flex;
     justify-content: $content;
 }
 
-footer{
+footer {
     @include size(100%, 40vh);
+    display: flex;
     background-color: #2B2B2B;
     color: white;
+
     a {
         color: white;
         text-decoration: none;
+        @include padding(12px, 5px, 12px, 5px);
+        font-size: 1.5vw;
     }
 
-    .footer-top {
-        @include flex(space-between);
+    .footer-left {
+        @include flex(center);
+        width: 50vw;
+        float: left;
+        flex-direction: column;
+
         .footer-row {
             @include flex(space-evenly);
-            width: 25vw;
-            padding-top: 5vh;
-            font-size: larger;
+            @include size(50vw, 5vh);
+
+            a:hover {
+                background-color: #343434;
+                transition: 0.6s;
+                border-style: solid;
+                border-width: 2px;
+                border-image: linear-gradient(to right, #008080, #7800C6) 1;
+            }
         }
-    
-        .img {
-            width: 20vw;
+
+        .footer-column {
+            @include flex(space-evenly);
+            @include size(40vw, 10vh);
+            padding-top: 5vh;
+            font-size: 1.5vw;
+            border-top: 2px solid white;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
-    .footer-bottom {
-        display: flex;
-        flex-direction: column;
-        width: 20vw;
+
+    .footer-right {
+        width: 50vw;
+        float: right;
+
+        img {
+            @include size(48vw, 35vh);
+        }
     }
 }
