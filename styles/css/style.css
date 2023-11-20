@@ -537,16 +537,19 @@ h3 {
   display: flex;
   justify-content: center;
   margin-top: calc(14vh + 30px);
+  min-height: calc(86vh - 30px);
   padding-top: 3rem;
 }
 #mainContainer #supportBox {
-  width: 45vw;
-  height: 45vw;
+  width: clamp(17rem, 10.816rem + 32.982vw, 40.5rem);
+  height: auto;
   background-color: #2b2b2b;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
+  margin-bottom: 5rem;
 }
 #mainContainer #supportBox .supportHeader {
   font-size: 30px;
@@ -559,42 +562,36 @@ h3 {
 #mainContainer #supportBox .inputs {
   display: flex;
   justify-content: space-evenly;
-  width: 45vw;
-  height: 5vh;
+  width: 100%;
+  height: auto;
 }
 #mainContainer #supportBox .inputs input {
   background-color: #d9d9d9;
   border: none;
-  font-size: medium;
-  width: 18.6vw;
-  height: 6vh;
+  font-size: clamp(0.95rem, 0.858rem + 0.491vw, 1.3rem);
+  width: 40%;
+  height: clamp(3rem, 2.737rem + 1.404vw, 4rem);
 }
 #mainContainer #supportBox .descInput {
-  width: 40vw;
-  height: 20vh;
+  width: 85%;
   color: #2b2b2b;
   font-weight: bolder;
   background-color: #d9d9d9;
-  font-size: medium;
+  font-size: clamp(0.85rem, 0.811rem + 0.211vw, 1rem);
   font-family: "Trebuchet MS";
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
+  margin-top: 1rem;
 }
 #mainContainer #supportBox ::placeholder {
   color: #2b2b2b;
   font-weight: bolder;
 }
 #mainContainer #supportBox .supportSubmit {
-  width: 25vw;
-  height: 5vh;
+  width: clamp(13rem, 11.158rem + 9.825vw, 20rem);
+  aspect-ratio: 7/1;
   background-color: #7800c6;
   border: none;
   font-family: "Trebuchet MS";
   font-size: medium;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2.5%;
   margin-top: 5%;
   background: linear-gradient(to right, #1698de, #5b58ff) padding-box, linear-gradient(to right, #1698de, #5b58ff) border-box;
   border: 5px solid transparent;
@@ -782,16 +779,19 @@ body {
   display: flex;
   justify-content: center;
   margin-top: calc(14vh + 30px);
+  min-height: calc(86vh - 30px);
   padding-top: 3rem;
 }
 #mainContainer #supportBox {
-  width: 45vw;
-  height: 45vw;
+  width: clamp(17rem, 10.816rem + 32.982vw, 40.5rem);
+  height: auto;
   background-color: #2b2b2b;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
+  margin-bottom: 5rem;
 }
 #mainContainer #supportBox .supportHeader {
   font-size: 30px;
@@ -804,42 +804,36 @@ body {
 #mainContainer #supportBox .inputs {
   display: flex;
   justify-content: space-evenly;
-  width: 45vw;
-  height: 5vh;
+  width: 100%;
+  height: auto;
 }
 #mainContainer #supportBox .inputs input {
   background-color: #d9d9d9;
   border: none;
-  font-size: medium;
-  width: 18.6vw;
-  height: 6vh;
+  font-size: clamp(0.95rem, 0.858rem + 0.491vw, 1.3rem);
+  width: 40%;
+  height: clamp(3rem, 2.737rem + 1.404vw, 4rem);
 }
 #mainContainer #supportBox .descInput {
-  width: 40vw;
-  height: 20vh;
+  width: 85%;
   color: #2b2b2b;
   font-weight: bolder;
   background-color: #d9d9d9;
-  font-size: medium;
+  font-size: clamp(0.85rem, 0.811rem + 0.211vw, 1rem);
   font-family: "Trebuchet MS";
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
+  margin-top: 1rem;
 }
 #mainContainer #supportBox ::placeholder {
   color: #2b2b2b;
   font-weight: bolder;
 }
 #mainContainer #supportBox .supportSubmit {
-  width: 25vw;
-  height: 5vh;
+  width: clamp(13rem, 11.158rem + 9.825vw, 20rem);
+  aspect-ratio: 7/1;
   background-color: #7800c6;
   border: none;
   font-family: "Trebuchet MS";
   font-size: medium;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2.5%;
   margin-top: 5%;
   background: linear-gradient(to right, #1698de, #5b58ff) padding-box, linear-gradient(to right, #1698de, #5b58ff) border-box;
   border: 5px solid transparent;
