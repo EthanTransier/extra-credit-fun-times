@@ -110,6 +110,12 @@
   #rightContent .contentParagraph {
     font-size: 2vw;
   }
+  .serviceContainer {
+    display: none;
+  }
+  .serviceMobileContainer {
+    display: flex;
+  }
 }
 
 @media (max-width: 670px) {

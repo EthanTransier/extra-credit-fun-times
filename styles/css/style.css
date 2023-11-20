@@ -330,46 +330,74 @@ footer .footer-right img {
 .serviceContainer {
   margin-top: calc(14vh + 30px);
   padding-top: 2rem;
+  height: calc(86vh - 30px);
+}
+.serviceContainer .startingContainer {
+  width: clamp(6.25rem, -6.875rem + 35vw, 25.938rem);
+  height: clamp(15rem, 9rem + 12vw, 21rem);
+  background-color: #2b2b2b;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 4px solid #1698de;
+  border-bottom: 4px solid #1698de;
+  font-size: 1.75rem;
+  font-weight: bold;
+  transition: all 2s ease;
 }
 
 .info, .info-bottom {
   transition: all 2s ease;
   display: flex;
   justify-content: center;
-  width: 70vw;
-  height: 50vh;
-  margin-left: 15vw;
+  width: 100vw;
+  height: auto;
   flex-wrap: wrap;
 }
 
-.info-bottom {
-  margin-bottom: 20vh;
-  margin-top: -50vh;
-}
 .info-bottom .h1 {
   margin-top: 15vh;
   font-size: 3vw;
   text-shadow: 0px 0px 10px #1698de;
 }
 .info-bottom .h2 {
-  font-size: 1vw;
+  font-size: 1rem;
   text-shadow: 0px 0px 10px #1698de;
 }
 
 .right {
-  display: block;
-  width: 30vw;
-  height: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: clamp(6.25rem, -6.875rem + 35vw, 25.938rem);
+  height: clamp(20rem, 19rem + 2vw, 21rem);
   background-color: #2b2b2b;
   color: white;
   text-align: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 2s ease-in-out;
+  padding-left: 1rem;
+  padding-right: 1rem;
   border-top: 4px solid #1698de;
   border-bottom: 4px solid #1698de;
 }
 .right p {
-  margin-top: -15px;
-  width: 25rem;
   font-weight: lighter;
+  font-size: clamp(0.75rem, 0.312rem + 0.875vw, 1.188rem);
 }
 .right button {
   background: linear-gradient(to right, #1698de, #5b58ff) padding-box, linear-gradient(to right, #1698de, #5b58ff) border-box;
@@ -379,17 +407,18 @@ footer .footer-right img {
   font-weight: bolder;
   width: 10rem;
   top: 10rem;
-  margin-top: 30px;
 }
 
 #rightOne {
   border: 4px solid #1698de;
   border-radius: 10px;
+  transition: all 2s ease-in-out;
 }
 
 #rightTwo {
   border: 4px solid #1698de;
   border-radius: 10px;
+  transition: all 2s ease-in-out;
 }
 
 .hidden {
@@ -406,13 +435,11 @@ footer .footer-right img {
   }
 }
 .info.hover, .hover.info-bottom {
-  height: 25vh;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .info-bottom.hover {
-  height: 25vh;
-  margin-top: 30vh;
+  margin-top: 20vw;
   justify-content: center;
 }
 
@@ -420,14 +447,21 @@ footer .footer-right img {
   border: 4px solid #1698de;
   border-radius: 10px;
   box-shadow: 0px 0px 30px #1698de;
+  top: 70%;
 }
 
 #rightOne.hover {
   box-shadow: 0px 0px 30px #1698de;
+  left: 18%;
 }
 
 #rightTwo.hover {
   box-shadow: 0px 0px 30px #1698de;
+  left: 82%;
+}
+
+#start.hover {
+  display: none;
 }
 
 .hidden.hover {
@@ -440,11 +474,62 @@ footer .footer-right img {
 }
 
 h3 {
-  padding-top: 15px;
-  padding-bottom: 30px;
   color: white;
   font-weight: bolder;
   font-size: 20px;
+}
+
+.serviceMobileContainer {
+  margin-top: calc(14vh + 30px);
+  display: none;
+  width: 100vw;
+  min-height: calc(86vh - 30px);
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+.serviceMobileContainer .hide {
+  margin-right: 200vw;
+}
+.serviceMobileContainer .info, .serviceMobileContainer .info-bottom {
+  width: 80vw;
+  aspect-ratio: 16/6;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: #2b2b2b;
+  box-shadow: 0px 0px 30px #1698de;
+  border: 4px solid #1698de;
+  border-radius: 10px;
+}
+.serviceMobileContainer .info h1, .serviceMobileContainer .info-bottom h1 {
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+.serviceMobileContainer .info h3, .serviceMobileContainer .info-bottom h3 {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+.serviceMobileContainer .info p, .serviceMobileContainer .info-bottom p {
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+.serviceMobileContainer .info1 {
+  transition: all 1s ease-in-out;
+}
+.serviceMobileContainer .info2 {
+  transition: all 1.5s ease-in-out;
+}
+.serviceMobileContainer .info3 {
+  transition: all 2s ease-in-out;
+}
+.serviceMobileContainer .reveal {
+  margin-right: 0;
 }
 
 #mainContainer {
@@ -872,6 +957,12 @@ body {
 @media (max-width: 760px) {
   #rightContent .contentParagraph {
     font-size: 2vw;
+  }
+  .serviceContainer {
+    display: none;
+  }
+  .serviceMobileContainer {
+    display: flex;
   }
 }
 @media (max-width: 670px) {
